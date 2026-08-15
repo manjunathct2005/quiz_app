@@ -57,7 +57,7 @@ def _get(key: str, local_fallback: str) -> str:
 # ---------------------------------------------------------------
 # 1. Hugging Face -- powers the AI quiz generation
 # ---------------------------------------------------------------
-_LOCAL_FALLBACK_HF_TOKEN = "PASTE_YOUR_HUGGING_FACE_TOKEN_HERE"
+_LOCAL_FALLBACK_HF_TOKEN = "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"
 HF_API_TOKEN = _get("HF_API_TOKEN", _LOCAL_FALLBACK_HF_TOKEN)
 
 HF_PROVIDER = "auto"                                      # let HF route to an available provider
@@ -74,7 +74,7 @@ SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = 587
 SMTP_USER = "sravanmanjuct@gmail.com"                     # the account that SENDS the mail
 
-_LOCAL_FALLBACK_SMTP_PASSWORD = "PASTE_YOUR_GMAIL_APP_PASSWORD_HERE"
+_LOCAL_FALLBACK_SMTP_PASSWORD = "rpvq jxue fuwr cvce"
 SMTP_APP_PASSWORD = _get("SMTP_APP_PASSWORD", _LOCAL_FALLBACK_SMTP_PASSWORD)
 
 # Every quiz-assigned notice and every finished-quiz PDF report is sent to
