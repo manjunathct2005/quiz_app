@@ -57,7 +57,7 @@ def _get(key: str, local_fallback: str) -> str:
 # ---------------------------------------------------------------
 # 1. Hugging Face -- powers the AI quiz generation
 # ---------------------------------------------------------------
-_LOCAL_FALLBACK_HF_TOKEN = "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"
+_LOCAL_FALLBACK_HF_TOKEN = "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"
 HF_API_TOKEN = _get("HF_API_TOKEN", _LOCAL_FALLBACK_HF_TOKEN)
 
 HF_PROVIDER = "auto"                                      # let HF route to an available provider
