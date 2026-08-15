@@ -1,0 +1,143 @@
+/* ---------- Global animated gradient background ---------- */
+.stApp {
+    background: radial-gradient(1200px 800px at 10% -10%, #1e3a8a33 0%, transparent 60%),
+                radial-gradient(1000px 700px at 110% 10%, #06b6d433 0%, transparent 55%),
+                linear-gradient(135deg, #0b1120 0%, #0f172a 45%, #111827 100%);
+    background-attachment: fixed;
+    color: #e5e7eb;
+}
+
+/* subtle floating orbs for depth (isometric / glass feel) */
+.stApp::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(400px 400px at 15% 20%, rgba(56,189,248,0.10), transparent 70%),
+        radial-gradient(500px 500px at 85% 75%, rgba(168,85,247,0.10), transparent 70%),
+        radial-gradient(350px 350px at 70% 15%, rgba(34,197,94,0.08), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ---------- Glass card base ---------- */
+.glass-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    padding: 22px 26px;
+    margin-bottom: 18px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.login-card {
+    max-width: 460px;
+    margin: 8vh auto;
+}
+
+/* ---------- Header / hero ---------- */
+.hero-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa 60%, #34d399);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0;
+}
+.hero-sub {
+    color: #94a3b8;
+    margin-top: 2px;
+    margin-bottom: 18px;
+}
+
+/* ---------- Subject pill / badge ---------- */
+.pill {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: rgba(56, 189, 248, 0.14);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    color: #7dd3fc;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+/* ---------- Question card ---------- */
+.question-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 16px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+}
+.question-card.correct {
+    border-color: rgba(34,197,94,0.55);
+    box-shadow: 0 0 0 1px rgba(34,197,94,0.25) inset;
+}
+.question-card.incorrect {
+    border-color: rgba(239,68,68,0.55);
+    box-shadow: 0 0 0 1px rgba(239,68,68,0.25) inset;
+}
+
+/* ---------- Score summary ---------- */
+.score-hero {
+    text-align: center;
+    padding: 30px 10px;
+}
+.score-num {
+    font-size: 3.2rem;
+    font-weight: 900;
+    background: linear-gradient(90deg,#34d399,#38bdf8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ---------- Buttons ---------- */
+.stButton>button, .stFormSubmitButton>button {
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0.55em 1.4em;
+    font-weight: 600;
+    box-shadow: 0 4px 18px rgba(124,58,237,0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.stButton>button:hover, .stFormSubmitButton>button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 22px rgba(124,58,237,0.5);
+}
+
+/* ---------- Sidebar ---------- */
+section[data-testid="stSidebar"] {
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(16px);
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ---------- Tabs ---------- */
+button[data-baseweb="tab"] {
+    background: transparent !important;
+    color: #94a3b8 !important;
+    font-weight: 600;
+}
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: #38bdf8 !important;
+    border-bottom: 2px solid #38bdf8 !important;
+}
+
+/* ---------- Progress bar ---------- */
+.stProgress > div > div {
+    background: linear-gradient(90deg, #38bdf8, #34d399) !important;
+}
+
+/* Hide Streamlit default chrome for a cleaner app feel */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
